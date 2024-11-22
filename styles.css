@@ -1,0 +1,351 @@
+:root {
+  --primary-color: hsl(0, 0%, 0%);
+  --secondary-color: #264653;
+  --accent-color: #e9c46a;
+  --text-color: #333;
+  --background-color: #f4f4f4;
+  --font-family: 'Arial, sans-serif';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.nav a {
+  margin: 0 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+  color: white;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero img{
+  position: left;
+}
+
+.hero button {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}/* Keyframe Animations */
+@keyframes fadeSlideIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+@keyframes buttonHoverPulse {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+      transform: scale(0.9);
+      opacity: 0;
+  }
+  60% {
+      transform: scale(1.05);
+      opacity: 1;
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+/* Global Styles */
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+  animation: fadeSlideIn 1.5s ease-in-out;
+}
+
+/* Header */
+.header {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  animation: fadeSlideIn 1.5s ease-in-out;
+}
+
+/* Navigation */
+.nav a {
+  margin: 0 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  animation: fadeSlideIn 2s ease-in-out;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  background-size: 200% 200%;
+  color: white;
+  text-align: center;
+  padding: 4rem 0;
+  animation: gradientShift 10s infinite ease-in-out;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  animation: bounceIn 2s ease-in-out;
+}
+
+.hero button {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  animation: fadeSlideIn 2.5s ease-in-out;
+}
+
+.hero button:hover {
+  background-color: var(--primary-color);
+  animation: buttonHoverPulse 0.5s ease-in-out;
+}
+
+/* About and Products */
+.about, .products {
+  padding: 2rem 0;
+  text-align: center;
+  animation: fadeSlideIn 2s ease-in-out;
+}
+
+/* Product Cards */
+.product-list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: fadeSlideIn 2.5s ease-in-out;
+}
+
+.product-card {
+  background: white;
+  border: 1px solid var(--accent-color);
+  border-radius: 10px;
+  padding: 1rem;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: bounceIn 1.5s ease-in-out;
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 10px;
+  animation: fadeSlideIn 2s ease-in-out;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--secondary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  animation: fadeSlideIn 1.5s ease-in-out;
+}
+
+
+.hero button:hover {
+  background-color: var(--primary-color);
+}
+
+.about, .products {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.product-list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product-card {
+  background: white;
+  border: 1px solid var(--accent-color);
+  border-radius: 10px;
+  padding: 1rem;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.footer {
+  background-color: var(--secondary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+.inquiry {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.inquiry h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.inquiry p {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.inquiry-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.inquiry button {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.inquiry button:hover {
+  background-color: white;
+  color: var(--primary-color);
+}
+/* Popup Message Styles */
+.popup-message {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #2a9d8f;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  display: none;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  animation: fadeOut 3s forwards;
+}
+
+.popup-icon {
+  font-size: 1.5rem;
+}
+
+.popup-text {
+  font-size: 1rem;
+}
+
+/* Fade out animation */
+@keyframes fadeOut {
+  0%, 80% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+}
+
